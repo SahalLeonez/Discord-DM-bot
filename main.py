@@ -2,7 +2,9 @@ import discord
 import asyncio
 
 TOKEN = 'Your Bot Token'
-USER_ID = 927107287242403900
+# Put your bot token here, simple as that
+USER_ID = 123456
+# Remove 123456 and replace it with your target (victim) user ID
 
 client = discord.Client()
 
@@ -13,5 +15,6 @@ async def on_ready():
         await user.send("<@{USER_ID}>")
 # Add what you want to send above by modifying this part: "<@{USER_ID}>"
         await asyncio.sleep(0.00001)
+# You can change the 0.00001 to 0.1 if you don't want to get rate limited by Discord but it will have a slower time.
 
 client.run(TOKEN)
